@@ -1,0 +1,114 @@
+<script>
+    function greatestOfTwoNumbers(a,b){
+        if (a>b){
+            console.log("The gretaest of two numbers is:",a)
+        } 
+        else{
+            console.log("The greatest of two numbers is:",b)
+        }
+    }
+    greatestOfTwoNumbers(9,10)
+    console.log("*******************************************")
+    function findSum(){
+        var sum=0;
+        const prices = [200, 120, 100, 108, 135, 162, 25, 170, 80, 110];
+        for( var i=0; i<prices.length; i++){
+              sum+=prices[i];
+        }
+        return sum;
+    }
+    console.log("The net price of the products is:",findSum()); 
+    console.log("*******************************************")
+    function findScaryWord(){
+        const words = ['George', 'Alice', 'Alex', 'John', 'Infanta', 'Xavior', 'LourdhAntony'];
+        max_name=words[0];
+        for(var i of words){
+            if(i.length>max_name.length){
+                max_name=i;
+            }
+        }
+        return max_name;
+    }
+    console.log("The word with maximum length:",findScaryWord())
+    console.log("*******************************************")
+    function sumOfArray(){
+        const mixedArr = [63, 122, 'audi', 61, true, 'volvo', '20', 'lamborghini', 38, 156];
+         var sum=0;
+        for(var i of mixedArr){
+            if(typeof i=="number"){
+                sum+=i;
+            }
+            else if(typeof i=="string"){
+                sum+=i.length;
+            }
+            else if(typeof i=="boolean"){
+                sum+=Number(i);
+            }
+        } 
+        return sum; 
+        }
+        console.log("The sum of array:",sumOfArray())
+        console.log("*******************************************")
+        function avgOfArray(){
+        const mixedArr = [63, 122, 'audi', 61, true, 'volvo', '20', 'lamborghini', 38, 156];
+         var sum=0;
+        for(var i of mixedArr){
+            if(typeof i=="number"){
+                sum+=i;
+            }
+            else if(typeof i=="string"){
+                sum+=i.length;
+            }
+            else if(typeof i=="boolean"){
+                sum+=Number(i);
+            }
+        } 
+        var avg=sum/mixedArr.length;
+        return avg; 
+        }
+        console.log("The average of array:",avgOfArray())
+        console.log("*******************************************")
+        function midpointOfArray(){
+        const levels = [22, 16, 9, 10, 7, 14, 11, 9];
+        var sum=0;
+        for(var i of levels){
+                sum+=i;
+                var avg=sum/levels.length;
+        } 
+        return avg; 
+        }
+        console.log("The average of array:",midpointOfArray())
+        console.log("*******************************************")
+        function uniqueArray(){
+            const items = ['bread', 'jam', 'milk',  'egg',  'flour',  'oil',  'rice',  'coffee powder',  'sugar',  'salt',  'egg',  'flour'];
+            console.log("The old array:",items)
+            const newarray=[];
+            for(var i of items){
+                if(newarray.indexOf(i)==-1){
+                    newarray.push(i);
+                }
+            }
+            return newarray;
+        }
+        console.log("The new unique array is:",uniqueArray())
+        console.log("*******************************************")
+        function searchElement(i){
+            const words = [  'door',  'window',  'ceiling',  'roof',  'plinth',  'tiles',  'ceiling',  'flooring'];
+            return words.includes(i)
+        }
+        console.log(searchElement('ceiling'));
+        console.log(searchElement('apple'));
+        console.log(searchElement('flooring'));
+        console.log("*******************************************");
+        function howManyTimesElementRepeated(){
+            const words = [  'machine',  'matter',  'subset',  'trouble',  'starting',  'matter',  'eating',  'matter',  'truth',  'disobedience',  'matter'];
+            var count={};
+            for( var i of words)
+            {
+                count[i]=(count[i] || 0) + 1;
+            }
+            return count;
+        }
+        console.log("The count of items:",howManyTimesElementRepeated());
+        console.log("*******************************************");
+</script>
