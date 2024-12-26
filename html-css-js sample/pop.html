@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup form</title>
+    <style>
+        .bground{
+            background-color: rgb(90, 80, 255);
+            height: fit-content;
+            width: 45%;
+            margin: 0px;
+            padding: 215px 50px;
+            text-align: center;   
+        }
+        button{
+            background-color: rgb(23, 240, 255);
+            width: 50%;
+            padding: 10px;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 50px;
+        }
+        .formdetails {
+  background-color:rgb(0, 0, 0);
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 20px;
+  margin-left: 53%;
+  margin-top: -47%;
+  opacity: 0.8;
+  display: none;
+
+  }
+  .formdetails.forminfo {
+  padding: 24px 60px;
+  gap: 20px;
+  background-color: #0000;
+  border-radius: 20px;
+  text-align: right;
+  }
+  
+  .forminfo input {
+  padding: 10px;
+  height: 25px;
+  width: 90%;
+  margin-bottom: 30px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  background-color: #00000080;
+  }
+  
+  input::placeholder {
+  color: gray;
+  }
+  
+  .forminfo textarea {
+  padding: 10px;
+  height: 70px;
+  width: 90%;
+  margin-bottom: 30px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  background-color: #00000080;
+  }
+  
+  textarea::placeholder {
+  color: gray;
+  }
+  
+  .forminfo button {
+  padding: 10px;
+  height: 47px;
+  width: 90%;
+  font-family: "IBM Plex Sans",sans-serif;
+  margin-bottom: 30px;
+  border: 1px solid rgb(23, 250, 255);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: 600;
+  background: linear-gradient(108deg, rgb(12, 255, 210) 0%, rgb(23, 250, 255) 48.1982%, rgb(0, 191, 255) 100%) rgba(0, 0, 0, 0);
+  }
+    </style>
+</head>
+<body>
+    <div class="bground">
+        <h1>Helloo!!! Welcome to this Form Registration.</h1>
+        <button class="btn">Click Here To Register!!!</button>
+    </div>
+    <div class="formdetails">
+        <form class="forminfo">
+            <input type="text" name="Fullname" placeholder="Full name" required><br>
+            <input type="email" name="email" placeholder="Email ID" required><br>
+            <input type="tel" name="contact" placeholder="Contact number (Optional)"><br>
+            <textarea name="message" placeholder="What do you like to know about the product?"
+                required></textarea><br>
+            <button type="submit" class="press">Submit</button>
+            <button type="submit" class="buton">Close</button>
+        </form>
+    </div>
+    <script>
+        var btn=document.querySelector(".btn")
+        var buton=document.querySelector(".buton")
+        var press=document.querySelector(".press")
+        var formdetails=document.querySelector(".formdetails")
+        btn.addEventListener("click",function(){
+            formdetails.style.display="block"
+        })
+        buton.addEventListener("click",function(){
+            formdetails.style.display="none"
+        })
+        press.addEventListener("click",function(){
+            alert("Form Submitted Successfully")
+        })
+    </script>
+</body>
+</html>
